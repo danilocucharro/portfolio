@@ -3,7 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cuchas Dev",
+  title: "Danilo Cucharro Dev",
   description: "Danilo Cucharro Portfolio",
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
         <img
           src="background.png"
           alt="background image"
-          className="absolute -z-10 w-full blur-xl h-dvw"
+          className="absolute -z-50 w-full blur-xl h-dvw"
         />
         {children}
       </body>
