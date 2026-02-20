@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-export function FadeIn({ children }: { children: React.ReactNode }) {
+export function FadeInX({ children }: { children: React.ReactNode }) {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef<HTMLDivElement>(null);
 
@@ -27,7 +27,7 @@ export function FadeIn({ children }: { children: React.ReactNode }) {
     <div
       ref={domRef}
       className={`transition-all duration-1000 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
       }`}
     >
       {children}
