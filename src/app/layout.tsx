@@ -3,7 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Danilo Cucharro Dev",
+  title: "Danilo Cucharro",
   description: "Danilo Cucharro Portfolio",
 };
 
