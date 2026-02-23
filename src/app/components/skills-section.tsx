@@ -1,8 +1,8 @@
 import StackIcon from "tech-stack-icons";
 
-export function SkillSection() {
+export function SkillsSection() {
   return (
-    <section className="flex flex-col w-full py-21.5 gap-9">
+    <section className="flex flex-col w-full py-21.5 gap-9" id="skills">
       <h2 className="text-[40px] font-bold text-white">Skills</h2>
 
       <div className="flex w-full gap-10 flex-wrap bg-white/10 p-10 rounded-4xl justify-center">

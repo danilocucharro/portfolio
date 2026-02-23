@@ -1,0 +1,40 @@
+import StackIcon from "tech-stack-icons";
+import { StackBadge } from "./stack-badge";
+import Link from "next/link";
+
+type ProjectCardProps = {
+  title: string;
+  image?: string;
+  stacks: string[];
+  link: string;
+};
+
+export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
+  return (
+    <article className="w-125 h-90 flex flex-col gap-2.5 rounded-[40px] border border-gray-600 bg-black-800">
+      <Link href={link}>
+        <figure className="overflow-hidden rounded-t-[40px]">
+          {!image ? (
+            <div className="relative w-full h-71 flex justify-center items-center bg-black hover:scale-120 transition-all duration-300">
+              <StackIcon name="github" variant="dark" className="size-20" />
+            </div>
+          ) : (
+            //eslint-disable-next-line
+            <img
+              src={image}
+              alt={`project ${title}`}
+              className="hover:scale-120 transition-all duration-300 cursor-pointer"
+            />
+          )}
+        </figure>
+      </Link>
+      <h3 className="text-center text-white text-base">{title}</h3>
+
+      <div className="flex flex-1 overflow-scroll px-5 gap-2.5 items-center overscroll-none">
+        {stacks.map((stack) => (
+          <StackBadge key={stack} iconTitle={stack} />
+        ))}
+      </div>
+    </article>
+  );
+}

@@ -1,7 +1,8 @@
 import { FadeInX } from "../components/fade-in-x";
 import { FadeInY } from "../components/fade-in-y";
 import { PresentationSection } from "../components/presentation-section";
-import { SkillSection } from "../components/skill-section";
+import { ProjectsSection } from "../components/projects-section";
+import { SkillsSection } from "../components/skills-section";
 
 export default function Home() {
   return (
@@ -11,8 +12,12 @@ export default function Home() {
       </FadeInY>
 
       <FadeInX>
-        <SkillSection />
+        <SkillsSection />
       </FadeInX>
+
+      <FadeInY>
+        <ProjectsSection />
+      </FadeInY>
     </main>
   );
 }

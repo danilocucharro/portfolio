@@ -3,7 +3,10 @@ import { Button } from "./button";
 
 export function PresentationSection() {
   return (
-    <section className="flex flex-col flex-1 gap-8 items-center mt-20">
+    <section
+      className="flex flex-col w-full gap-8 items-center mt-20"
+      id="home"
+    >
       <div className="flex flex-col max-w-157.5 items-center gap-6">
         {/*eslint-disable-next-line @next/next/no-img-element */}
         <img
