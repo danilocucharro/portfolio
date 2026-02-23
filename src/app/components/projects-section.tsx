@@ -8,7 +8,7 @@ export function ProjectsSection() {
       <div className="flex w-full flex-wrap gap-19">
         <ProjectCard
           title="Aços Globo - Website"
-          image="acosglobo.png"
+          image="acos-globo.png"
           stacks={["React", "Typescript", "Zod", "Tailwindcss", "Figma"]}
           link="https://www.acosglobo.com.br"
         />
