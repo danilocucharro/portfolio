@@ -30,7 +30,7 @@ export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
       </Link>
       <h3 className="text-center text-white text-base">{title}</h3>
 
-      <div className="flex flex-1 overflow-scroll px-5 gap-2.5 items-center overscroll-none">
+      <div className="flex flex-1 overflow-scroll px-5 gap-2.5 items-center overflow-y-auto scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {stacks.map((stack) => (
           <StackBadge key={stack} iconTitle={stack} />
         ))}
