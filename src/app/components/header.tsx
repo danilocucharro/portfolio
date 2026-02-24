@@ -13,7 +13,7 @@ export function Header() {
       <header className="flex bg-black-800 w-137.5 h-15.5 py-2.5 px-8 rounded-full border border-gray-700 shadow-inner shadow-gray-700">
         <nav className="flex w-full gap-5 items-center justify-evenly">
           <Link
-            href="#home"
+            href="/"
             className="flex flex-1 h-full justify-center items-center hover:bg-gray-700/50 rounded-full transition-colors duration-150"
           >
             <p className="font-bold text-white text-base">Home</p>

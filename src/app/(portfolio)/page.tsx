@@ -1,3 +1,4 @@
+import { AboutMeSection } from "../components/about-me-section";
 import { FadeInX } from "../components/fade-in-x";
 import { FadeInY } from "../components/fade-in-y";
 import { PresentationSection } from "../components/presentation-section";
@@ -18,6 +19,10 @@ export default function Home() {
       <FadeInY>
         <ProjectsSection />
       </FadeInY>
+
+      <FadeInX>
+        <AboutMeSection />
+      </FadeInX>
     </main>
   );
 }

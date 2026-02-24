@@ -65,6 +65,14 @@ export function SkillsSection() {
           name="zod"
           className="size-20 hover:-translate-y-2 transition-transform duration-300"
         />
+        <StackIcon
+          name="jest"
+          className="size-20 hover:-translate-y-2 transition-transform duration-300"
+        />
+        <StackIcon
+          name="vitest"
+          className="size-20 hover:-translate-y-2 transition-transform duration-300"
+        />
       </div>
     </section>
   );

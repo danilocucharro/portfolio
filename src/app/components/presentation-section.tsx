@@ -1,5 +1,6 @@
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import { Button } from "./button";
+import Link from "next/link";
 
 export function PresentationSection() {
   return (
@@ -20,15 +21,22 @@ export function PresentationSection() {
           </h1>
         </div>
         <div className="w-full flex justify-center gap-9">
-          <Button className="bg-blue-800">
-            <LinkedinIcon className="size-6" />
-            <p>Linkedin</p>
-          </Button>
+          <Link
+            href="https://www.linkedin.com/in/danilo-cucharro-954081169/"
+            target="_blank"
+          >
+            <Button className="bg-blue-800">
+              <LinkedinIcon className="size-6" />
+              <p>Linkedin</p>
+            </Button>
+          </Link>
 
-          <Button className="bg-black-800">
-            <GithubIcon className="size-6" />
-            <p>Github</p>
-          </Button>
+          <Link href="https://github.com/danilocucharro" target="_blank">
+            <Button className="bg-black-800">
+              <GithubIcon className="size-6" />
+              <p>Github</p>
+            </Button>
+          </Link>
 
           <Button className="text-black-800">
             <MailIcon className="size-6" />
