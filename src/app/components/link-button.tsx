@@ -11,7 +11,7 @@ export function LinkButton({ children, url }: ButtonLinkProps) {
     <Link
       href={url}
       target="_blank"
-      className="flex justify-center items-center size-10 border border-gray-700 bg-transparent rounded-full"
+      className="flex justify-center items-center size-10 border border-gray-700 bg-transparent rounded-full hover:opacity-60"
     >
       {children}
     </Link>
