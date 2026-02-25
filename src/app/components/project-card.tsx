@@ -23,14 +23,14 @@ export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
             <img
               src={image}
               alt={`project ${title}`}
-              className="hover:scale-120 transition-all duration-300 cursor-pointer"
+              className="hover:scale-120 transition-all duration-300 size-full"
             />
           )}
         </figure>
       </Link>
       <h3 className="text-center text-white text-base">{title}</h3>
 
-      <div className="flex flex-1 overflow-scroll px-5 gap-2.5 items-center overflow-y-auto scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <div className="flex flex-1 overflow-scroll px-5 gap-2.5 items-center scrollbar-hide rounded-b-[40px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {stacks.map((stack) => (
           <StackBadge key={stack} iconTitle={stack} />
         ))}

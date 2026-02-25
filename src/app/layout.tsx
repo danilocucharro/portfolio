@@ -18,13 +18,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={jetBrainsMonoFont.className}>
-      <body className="bg-black-800 antialiased">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="background.png"
-          alt="background image"
-          className="absolute -z-50 w-full blur-xl h-dvw"
-        />
+      <body
+        className="bg-black-800 antialiased
+        relative
+        before:content-['']
+        before:fixed
+        before:inset-0
+        before:-z-10
+        before:bg-[url('/background.png')]
+        before:bg-cover
+        before:bg-center
+        before:bg-no-repeat
+        before:blur-lg"
+      >
         {children}
       </body>
     </html>

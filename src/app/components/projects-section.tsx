@@ -5,7 +5,7 @@ export function ProjectsSection() {
     <section className="flex flex-col gap-9 py-21.5" id="projects">
       <h2 className="text-white font-bold text-[40px]">Projects</h2>
 
-      <div className="flex w-full flex-wrap gap-19">
+      <div className="flex flex-wrap w-full gap-19">
         <ProjectCard
           title="Aços Globo - Website"
           image="acos-globo.png"
