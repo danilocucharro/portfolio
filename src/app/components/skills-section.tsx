@@ -1,78 +1,43 @@
-import StackIcon from "tech-stack-icons";
+import StackIcon, { IconName } from "tech-stack-icons";
+
+type StacksListType = {
+  name: IconName;
+  variant: "dark" | "light" | "grayscale";
+};
 
 export function SkillsSection() {
+  const stacksList: StacksListType[] = [
+    { name: "js", variant: "light" },
+    { name: "typescript", variant: "light" },
+    { name: "tailwindcss", variant: "light" },
+    { name: "react", variant: "light" },
+    { name: "nestjs", variant: "light" },
+    { name: "postgresql", variant: "light" },
+    { name: "nodejs", variant: "light" },
+    { name: "git", variant: "light" },
+    { name: "nextjs2", variant: "dark" },
+    { name: "docker", variant: "light" },
+    { name: "prisma", variant: "dark" },
+    { name: "figma", variant: "light" },
+    { name: "github", variant: "dark" },
+    { name: "zod", variant: "light" },
+    { name: "jest", variant: "light" },
+    { name: "vitest", variant: "light" },
+  ];
+
   return (
     <section className="flex flex-col w-full py-21.5 gap-9" id="skills">
       <h2 className="text-[40px] font-bold text-white">Skills</h2>
 
-      <div className="flex w-full gap-10 flex-wrap bg-white/10 p-10 rounded-4xl justify-center">
-        <StackIcon
-          name="js"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="typescript"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="tailwindcss"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="react"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="nestjs"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="postgresql"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="nodejs"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="git"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="nextjs2"
-          variant="dark"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="docker"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="prisma"
-          variant="dark"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="figma"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="github"
-          variant="dark"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="zod"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="jest"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
-        <StackIcon
-          name="vitest"
-          className="size-20 hover:-translate-y-2 transition-transform duration-300"
-        />
+      <div className="flex w-full gap-10 md:flex-wrap bg-white/10 p-10 rounded-4xl justify-center">
+        {stacksList.map((stack) => (
+          <StackIcon
+            key={stack.name}
+            name={stack.name}
+            variant={stack.variant}
+            className="size-20 hover:-translate-y-2 transition-transform duration-300"
+          />
+        ))}
       </div>
     </section>
   );
