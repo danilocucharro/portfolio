@@ -7,7 +7,7 @@ import { SkillsSection } from "../components/skills-section";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col gap-4.5">
+    <main className="w-full flex flex-col gap-4.5 max-md:px-2.5">
       <FadeInY>
         <PresentationSection />
       </FadeInY>

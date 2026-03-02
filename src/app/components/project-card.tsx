@@ -11,7 +11,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
   return (
-    <article className="w-125 h-90 flex flex-col gap-2.5 rounded-[40px] border border-gray-600 bg-black-800">
+    <article className="max-w-125 max-md:w-full md:h-90 max-md:h-65 flex flex-col gap-2.5 rounded-[40px] border border-gray-600 bg-black-800">
       <Link href={link} target="_blank">
         <figure className="overflow-hidden rounded-t-[40px]">
           {!image ? (
