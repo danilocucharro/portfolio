@@ -29,7 +29,9 @@ export function SkillsSection() {
     <section className="flex flex-col w-full py-21.5 gap-9" id="skills">
       <h2 className="text-[40px] font-bold text-white">Skills</h2>
 
-      <div className="flex w-full gap-10 md:flex-wrap bg-white/10 p-10 rounded-4xl justify-center">
+      <div
+        className={`flex w-full max-md:grid max-md:grid-cols-16 max-md:gap-30 gap-10 md:flex-wrap bg-white/10 p-10 rounded-4xl md:justify-center overflow-scroll overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]`}
+      >
         {stacksList.map((stack) => (
           <StackIcon
             key={stack.name}
