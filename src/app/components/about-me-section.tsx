@@ -4,7 +4,7 @@ import { LinkButton } from "./link-button";
 export function AboutMeSection() {
   return (
     <section className="flex flex-col py-21.5 w-full gap-9" id="about-me">
-      <h2 className="text-white text-[40px] font-bold">About me</h2>
+      <h2 className="text-white text-[40px] font-bold text-center">About me</h2>
 
       <div className="flex max-md:flex-col p-5 gap-3 border border-gray-700 rounded-[40px] bg-black-800 items-center">
         <p className="text-white max-md:hidden text-[20px] leading-9 text-balance">
@@ -16,7 +16,7 @@ export function AboutMeSection() {
           landing pages, dashboards, and full web systems. Committed to quality,
           deadlines, and clear communication. Let’s build something great!
         </p>
-        <p className="text-white md:hidden max-md:text-sm text-[20px] leading-9 text-balance">
+        <p className="text-white md:hidden max-md:text-sm text-[20px] leading-9 text-balance text-justify">
           I’m a web developer with strong experience building modern,
           responsive, and high-performance interfaces. I turn Figma designs into
           functional, pixel-perfect websites with clean, scalable code.

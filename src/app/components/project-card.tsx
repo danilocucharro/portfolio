@@ -11,7 +11,7 @@ type ProjectCardProps = {
 
 export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
   return (
-    <article className="max-w-125 max-md:w-full md:h-90 max-md:h-65 flex flex-col gap-2.5 rounded-[40px] border border-gray-600 bg-black-800">
+    <article className="max-w-125 max-md:w-full flex flex-col rounded-[40px] border border-gray-600 bg-black-800">
       <Link href={link} target="_blank">
         <figure className="overflow-hidden rounded-t-[40px]">
           {!image ? (
@@ -28,12 +28,14 @@ export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
           )}
         </figure>
       </Link>
-      <h3 className="text-center text-white text-base">{title}</h3>
+      <div className="flex flex-col pt-2 pb-4 gap-2 rounded-b-[40px] overflow-hidden">
+        <h3 className="text-center text-white text-base">{title}</h3>
 
-      <div className="flex flex-1 overflow-scroll px-5 gap-2.5 items-center scrollbar-hide rounded-b-[40px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-        {stacks.map((stack) => (
-          <StackBadge key={stack} iconTitle={stack} />
-        ))}
+        <div className="flex overflow-scroll px-4 gap-2.5 items-center scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          {stacks.map((stack) => (
+            <StackBadge key={stack} iconTitle={stack} />
+          ))}
+        </div>
       </div>
     </article>
   );
