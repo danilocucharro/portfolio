@@ -63,7 +63,7 @@ export function Header() {
       </header>
 
       <Dialog>
-        <form className="flex w-full justify-center">
+        <form className="max-md:flex max-md:w-full max-md:justify-center">
           <DialogTrigger
             className="underline font-bold text-base max-md:fixed max-md:bottom-5 max-md:z-50"
             asChild
