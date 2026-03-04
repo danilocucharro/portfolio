@@ -63,9 +63,12 @@ export function Header() {
       </header>
 
       <Dialog>
-        <form>
-          <DialogTrigger className="underline font-bold text-base" asChild>
-            <button className="flex max-md:fixed max-md:bottom-5 max-md:z-50 max-md: px-2 h-15.5 w-40 bg-white text-black-800 shadow-inner items-center justify-center rounded-full cursor-pointer hover:bg-black hover:text-white border border-gray-700 transition-colors duration-200">
+        <form className="flex w-full justify-center">
+          <DialogTrigger
+            className="underline font-bold text-base max-md:fixed max-md:bottom-5 max-md:z-50"
+            asChild
+          >
+            <button className="flex px-2 h-15.5 w-40 bg-white text-black-800 shadow-inner items-center justify-center rounded-full cursor-pointer hover:bg-black hover:text-white border border-gray-700 transition-colors duration-200">
               <p className="underline font-bold text-base">GET IN TOUCH</p>
             </button>
           </DialogTrigger>
