@@ -1,9 +1,9 @@
-import { AboutMeSection } from "../components/about-me-section";
-import { FadeInX } from "../components/fade-in-x";
-import { FadeInY } from "../components/fade-in-y";
-import { PresentationSection } from "../components/presentation-section";
-import { ProjectsSection } from "../components/projects-section";
-import { SkillsSection } from "../components/skills-section";
+import { AboutMeSection } from "./components/about-me-section";
+import { FadeInX } from "./components/fade-in-x";
+import { FadeInY } from "./components/fade-in-y";
+import { PresentationSection } from "./components/presentation-section";
+import { ProjectsSection } from "./components/projects-section";
+import { SkillsSection } from "./components/skills-section";
 
 export default function Home() {
   return (

@@ -1,6 +1,8 @@
+"use client";
 import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import { Button } from "./button";
 import Link from "next/link";
+import Typewriter from "typewriter-effect";
 
 export function PresentationSection() {
   return (
@@ -15,9 +17,18 @@ export function PresentationSection() {
           alt="Danilo Cucharro Photo"
           className="hover:scale-110 transition-all duration-800"
         />
-        <div className="w-full">
+        <div className="w-full h-20">
           <h1 className="font-bold text-white text-4xl max-md:text-3xl text-wrap text-center">
-            Welcome, {"I'm"} Danilo Cucharro a Full Stack Developer
+            <Typewriter
+              options={{
+                strings: [
+                  "Welcome, I'm Danilo Cucharro a Full Stack Developer",
+                ],
+                autoStart: true,
+                delay: 100,
+                loop: true,
+              }}
+            />
           </h1>
         </div>
         <div className="w-full flex justify-center gap-9 max-md:flex-col">

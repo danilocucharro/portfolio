@@ -6,6 +6,7 @@
 
 @theme {
     --color-black-800: #131313;
+    --color-black-700: #262626;
 
     --color-gray-700: #373737;
     --color-gray-600: #3c3c3c;
@@ -131,10 +132,10 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
 }

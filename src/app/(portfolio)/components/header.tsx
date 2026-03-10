@@ -25,6 +25,8 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const contactFormSchema = z.object({
   name: z
@@ -36,32 +38,46 @@ const contactFormSchema = z.object({
 });
 
 export function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
 
   const onSubmit = (data: z.infer<typeof contactFormSchema>) => {
-    toast("You submitted the following values:", {
-      description: (
-        <pre className="mt-2 w-[320px] overflow-x-auto rounded-md bg-code p-4 text-code-foreground">
-          <code>{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-      position: "top-center",
-
-      classNames: {
-        content: "flex flex-col gap-2",
-      },
-      style: {
-        "--border-radius": "calc(var(--radius)  + 4px)",
-      } as React.CSSProperties,
-    });
+    try {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+          "#contact-form",
+          {
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+          },
+        )
+        .then(() =>
+          toast.success("Thank you! your message already reach me 😃", {
+            position: "top-center",
+          }),
+        );
+    } catch (err) {
+      toast.warning("Some bug occured and your message didn't reached me 😭", {
+        position: "top-center",
+      });
+    } finally {
+      form.reset();
+      setIsModalOpen(false);
+    }
   };
 
   return (
     <div className="flex max-md:flex-col-reverse max-md:gap-4 w-full max-w-268.5 items-center justify-between py-10">
       <div className="flex px-2 gap-2 bg-white w-44 h-8 rounded-full border-gray-700 shadow-inner items-center">
-        <div className="bg-dark-green-500 w-2.5 h-2.5 rounded-full animate-pulse" />
+        <div className="bg-blue-500 w-2.5 h-2.5 rounded-full animate-pulse" />
         <span className="font-extrabold text-black text-[11px]">
           Open for new projects
         </span>
@@ -132,7 +148,6 @@ export function Header() {
                       {...field}
                       id="contact-form-name"
                       name="name"
-                      defaultValue="John Doe"
                       autoComplete="off"
                     />
                     {fieldState.invalid && (
@@ -151,7 +166,7 @@ export function Header() {
                       {...field}
                       id="contact-form-email"
                       name="email"
-                      defaultValue="johndoe@email.com"
+                      autoComplete="off"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />
@@ -171,7 +186,7 @@ export function Header() {
                     <Textarea
                       {...field}
                       id="contact-form-message"
-                      placeholder="Type your idea for a project or just contact me."
+                      name="message"
                     />
                     {fieldState.invalid && (
                       <FieldError errors={[fieldState.error]} />

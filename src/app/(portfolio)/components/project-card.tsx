@@ -11,9 +11,9 @@ type ProjectCardProps = {
 
 export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
   return (
-    <article className="max-w-125 max-md:w-full flex flex-col rounded-[40px] border border-gray-600 bg-black-800">
+    <article className="max-w-125 max-md:w-full flex flex-col rounded-[25px] bg-gradient-to-r from-black-800 to-black-700">
       <Link href={link} target="_blank">
-        <figure className="overflow-hidden rounded-t-[40px]">
+        <figure className="overflow-hidden rounded-t-[25px]">
           {!image ? (
             <div className="relative w-full h-71 flex justify-center items-center bg-black hover:scale-120 transition-all duration-300">
               <StackIcon name="github" variant="dark" className="size-20" />
@@ -28,7 +28,7 @@ export function ProjectCard({ image, stacks, title, link }: ProjectCardProps) {
           )}
         </figure>
       </Link>
-      <div className="flex flex-col pt-2 pb-4 gap-2 rounded-b-[40px] overflow-hidden">
+      <div className="flex flex-col pt-2 pb-4 gap-2 rounded-b-[25px] overflow-hidden">
         <h3 className="text-center text-white text-base">{title}</h3>
 
         <div className="flex overflow-scroll px-4 gap-2.5 items-center scrollbar-hide [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">

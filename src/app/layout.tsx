@@ -26,7 +26,7 @@ export default function RootLayout({
         before:fixed
         before:inset-0
         before:-z-10
-        before:bg-[url('/background.png')]
+        before:bg-[url('/background3.jpg')]
         before:bg-cover
         before:bg-center
         before:bg-no-repeat

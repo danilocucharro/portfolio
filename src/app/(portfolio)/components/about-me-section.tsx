@@ -3,10 +3,10 @@ import { LinkButton } from "./link-button";
 
 export function AboutMeSection() {
   return (
-    <section className="flex flex-col py-21.5 w-full gap-9" id="about-me">
+    <footer className="flex flex-col py-21.5 w-full gap-9" id="about-me">
       <h2 className="text-white text-[40px] font-bold text-center">About me</h2>
 
-      <div className="flex max-md:flex-col p-5 gap-3 border border-gray-700 rounded-[40px] bg-black-800 items-center">
+      <div className="flex max-md:flex-col p-5 gap-3 rounded-2xl bg-white/10 items-center">
         <p className="text-white max-md:hidden text-[20px] leading-9 text-balance">
           I’m a web developer with strong experience building modern,
           responsive, and high-performance interfaces. I work with HTML5, CSS3,
@@ -48,6 +48,6 @@ export function AboutMeSection() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
